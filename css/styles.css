@@ -1,0 +1,101 @@
+:root {
+    --coral: #F28C8C;
+    --amarillo: #F9E79F;
+    --verde: #C8E6C9;
+    --azul: #A9CCE3;
+    --marfil: #FAF9F6;
+    --gris: #AFAFAF;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--marfil);
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--coral);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--verde);
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contenido-hero {
+    max-width: 500px;
+  }
+  
+  .hero img {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .boton {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--coral);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  .galeria {
+    background-color: var(--amarillo);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .producto {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .producto img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background-color: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
