@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Creaciones de mi Hermana</title>
-  <link rel="stylesheet" href=css/styles.css>
+  <title>Marife y sus chuches</title>
+  <link rel="stylesheet" href=css/styles-pinnatas.css>
 </head>
 <body>
 
   <header>
-    <h1>🎨 Creaciones de mi Hermana</h1>
+    <h1>Marife y sus chuches</h1>
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -46,6 +46,23 @@
       </div>
     </div>
   </section>
+
+    <!-- Formulario de contacto -->
+    <section class="contacto">
+      <h3>Contacto</h3>
+      <form action="enviar.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+  
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+  
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+  
+        <button type="submit" class="boton">Enviar mensaje</button>
+      </form>
+    </section>
 
   <footer>
     <p>&copy; 2025 Creaciones de mi Hermana</p>
