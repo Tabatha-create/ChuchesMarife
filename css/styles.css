@@ -1,147 +1,314 @@
+/* Estilos para la página web de Marife */
+/* Paleta de colores extraída del logo */
 :root {
-  --azul-pastel: #A3C6FF;
-  --melocoton-pastel: #F9C1A6;
-  --verde-menta-pastel: #A9E0D4;
-  --lavanda-pastel: #D5A6E0;
-  --gris-claro: #F2F2F2;
+  --rosa: #E94B7E;
+  --naranja: #F07C3E;
+  --amarillo: #FCBB36;
+  --verde: #8BC04F;
+  --turquesa: #00A0A1;
+  --morado: #6D2C7D;
+  --blanco: #FFFFFF;
+  --negro: #333333;
+  --gris-claro: #F5F5F5;
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--gris-claro);
-  color: #333;
+  font-family: 'Arial', sans-serif;
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.6;
 }
 
+/* Estilos para el logo */
+.logo {
+  display: block;
+  max-width: 220px;
+  margin: 0 auto 1rem auto;
+}
+
+/* Estilos de encabezado */
 header {
-  background-color: var(--azul-pastel);
-  color: white;
+  background: linear-gradient(to right, var(--rosa), var(--naranja), var(--amarillo), var(--verde), var(--turquesa), var(--morado));
   padding: 1rem;
+  padding-top: 2rem;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
+header h1 {
+  color: var(--blanco);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar el texto del título cuando se muestra el logo */
+.logo-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
   padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Animación sutil para el logo */
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo:hover {
+  animation: logoFloat 2s ease-in-out infinite;
+}
+
+/* Navegación */
+nav ul {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  list-style: none;
+  padding: 0.5rem 0;
 }
 
-nav a {
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--blanco);
   text-decoration: none;
-  color: white;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
+nav ul li a:hover {
+  background-color: var(--blanco);
+  color: var(--morado);
+}
+
+/* Sección Hero */
 .hero {
   display: flex;
-  flex-wrap: wrap;
-  background-color: var(--gris-claro);
-  padding: 2rem;
   align-items: center;
-  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: var(--gris-claro);
+  flex-wrap: wrap;
 }
 
 .contenido-hero {
-  max-width: 500px;
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+}
+
+.hero h2 {
+  color: var(--turquesa);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.hero p {
+  color: var(--negro);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .hero img {
-  max-width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 300px;
+  max-height: 400px;
+  object-fit: cover;
 }
 
+/* Botones */
 .boton {
   display: inline-block;
-  margin-top: 1rem;
-  background-color: var(--lavanda-pastel);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  background-color: var(--rosa);
+  color: var(--blanco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
   text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .boton:hover {
-  background-color: var(--melocoton-pastel);
+  background-color: var(--naranja);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Sección Galería */
 .galeria {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
-  background-color: var(--gris-claro);
+}
+
+.galeria h3 {
+  color: var(--morado);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.galeria h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--rosa), var(--naranja));
 }
 
 .productos {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .producto {
-  background-color: white;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
   padding: 1rem;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: var(--gris-claro);
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 3px solid var(--blanco);
 }
 
-footer {
-  background-color: var(--verde-menta-pastel);
-  color: white;
+.producto p {
+  color: var(--turquesa);
+  font-weight: bold;
+}
+
+/* Sección de contacto */
+.contacto {
+  background-color: var(--verde);
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 1rem;
   margin-top: 2rem;
 }
 
-/* Estilos para la sección de contacto */
-.contacto {
-  padding: 2rem;
-  text-align: center;
+.contacto h3 {
+  color: var(--blanco);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 .contacto form {
-  max-width: 500px;
-  margin: auto;
-  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--blanco);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contacto label {
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 0.5rem;
+  color: var(--morado);
+  font-weight: bold;
 }
 
-.contacto input, .contacto textarea {
+.contacto input, 
+.contacto textarea {
   width: 100%;
   padding: 0.8rem;
-  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--gris-claro);
   border-radius: 5px;
-  border: 1px solid #ccc;
+}
+
+.contacto input:focus, 
+.contacto textarea:focus {
+  outline: none;
+  border-color: var(--amarillo);
+  box-shadow: 0 0 5px rgba(252, 187, 54, 0.5);
 }
 
 .contacto button {
-  background-color: var(--melocoton-pastel);
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  margin-top: 1rem;
 }
 
-.contacto button:hover {
-  background-color: var(--lavanda-pastel);
+/* Footer */
+footer {
+  background-color: var(--morado);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contenido-hero {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .producto {
+    min-width: 100%;
+  }
 }
 
 
