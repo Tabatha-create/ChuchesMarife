@@ -29,8 +29,9 @@ body {
 /* Estilos para el logo */
 .logo {
   display: block;
-  max-width: 220px;
+  max-width: 350px;
   margin: 0 auto 1rem auto;
+  border-radius: 25px;
 }
 
 /* Estilos de encabezado */
@@ -67,7 +68,7 @@ header h1 {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
   100% {
     transform: translateY(0);
@@ -75,7 +76,7 @@ header h1 {
 }
 
 .logo:hover {
-  animation: logoFloat 2s ease-in-out infinite;
+  animation: logoFloat 5s ease-in-out infinite;
 }
 
 /* Navegación */
