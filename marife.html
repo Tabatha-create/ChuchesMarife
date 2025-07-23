@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marife y sus primores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,23 +16,22 @@
     <h1 class="logo-visible">Marife y sus primores</h1>
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Sobre mí</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="inicio" class="hero">
     <div class="contenido-hero">
       <h2>Manualidades llenas de color, amor y creatividad</h2>
       <p>Descubre nuestras piñatas, bisuterías y filigranas hechas a mano.</p>
-      <a href="#" class="boton">Ver productos</a>
     </div>
   </section>
 
-  <section class="galeria">
+  <section id="productos" class="galeria">
   <h3>Destacados</h3>
   <div class="productos">
     <div class="producto-container">
@@ -61,8 +61,16 @@
   </div>
 </section>
 
+  <section id="sobre-mi" class="galeria">
+    <h3>Sobre mí</h3>
+    <div class="sobre-mi-contenido"> 
+      <img src="img/marife.jpg" alt="Foto de Marife" class="foto-sobre-mi">
+      <p>Marife es una creadora inquieta, apasionada por las manualidades, los colores alegres y la originalidad. Una persona con una sensibilidad muy especial que le da a cada artículo o piñata su toque personal y divertido.</p>
+    </div>
+  </section>
+  
   <!-- Formulario de contacto -->
-  <section class="contacto">
+  <section id="contacto" class="contacto">
     <h3>Contacto</h3>
     <form action="enviar.php" method="POST">
       <label for="nombre">Nombre:</label><br>
@@ -79,9 +87,16 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Marife y sus primores
+    <p>&copy; 2025 Marife y sus primores</p>
+    <p>Esta página forma parte del proyecto familiar: “Galería Creativa”.</p>
     <p>Síguenos en redes: 💖 📸 📘</p>
   </footer>
+
+    <button id="btnUp" title="Ir arriba">↑</button>
+  <a href="../index.html" id="btnHome" title="Volver a la página principal">
+  <img src="../img/vgr1.png" alt="Inicio" />
+</a>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
